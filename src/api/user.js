@@ -14,6 +14,6 @@ export const createUser = (data) => {
   return axios.post('/user', data, config);
 };
 
-/*export const updateUser = (_id, data) => {
-  return axios.put(`/user/${_id}`, data, config);
-}*/
+export const updateUser = (id, data) => {
+  return axios.put(`/user/${id}`, data, config);
+}

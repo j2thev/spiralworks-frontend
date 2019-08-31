@@ -144,10 +144,10 @@ class Login extends Component {
     return (
       <L.LoginContainer>
         <Row>
-          <Col sm="12" md={{ size: 6, offset: 3 }}>
+          <Col sm="12" md={{ size: 8, offset: 2 }}>
             <Form onSubmit={this.handleSubmit} noValidate>
               <FormGroup>
-                <h4>Sign in to Spiralworks</h4>
+                <h3>Sign in</h3>
               </FormGroup>
               <FormGroup>
                 <Alert color={alert.color} isOpen={alert.visible}>
@@ -162,6 +162,7 @@ class Login extends Component {
                   required
                   name="username"
                   value={username}
+                  autoFocus
                   onChange={this.handleChange}
                 />
                 <FormText color="danger">
@@ -182,7 +183,7 @@ class Login extends Component {
                   {errors.password}
                 </FormText>
               </FormGroup>
-              <Button block color="primary">Sign in</Button>
+              <Button block color="primary">SIGN IN</Button>
             </Form>
           </Col>
         </Row>

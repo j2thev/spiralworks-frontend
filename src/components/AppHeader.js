@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import {
   Collapse,
   Navbar,
@@ -12,14 +13,20 @@ import {
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
-  DropdownItem
+  DropdownItem,
+  Button
 } from 'reactstrap';
+import * as userActions from '../actions/userActions';
+import history from '../utils/history';
 
 class AppHeader extends Component {
   constructor(props) {
     super(props);
 
     this.toggle = this.toggle.bind(this);
+    this.onLogout = this.onLogout.bind(this);
+    this.onSignUp = this.onSignUp.bind(this);
+
     this.state = {
       isOpen: false
     };
@@ -31,9 +38,19 @@ class AppHeader extends Component {
     });
   }
 
+  onLogout() {
+    const { logout } = this.props;
+
+    logout();
+  }
+
+  onSignUp() {
+    history.push('/join');
+  }
+
   render() {
     const { user } = this.props;
-    const { firstName, lastName, isAuthenticated } = user;
+    const { isAuthenticated } = user;
     let NavList;
 
     if (!isAuthenticated) {
@@ -43,22 +60,21 @@ class AppHeader extends Component {
             <NavLink href="/login">Sign in</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="/join">Sign up</NavLink>
+            <Button color="secondary" outline={true} onClick={this.onSignUp}>Sign Up</Button>
           </NavItem>
         </Nav>;
     } else {
       NavList =
         <Nav className="ml-auto" navbar>
+          <NavItem>
+            <NavLink href="/profile">Profile</NavLink>
+          </NavItem>
           <UncontrolledDropdown nav inNavbar>
             <DropdownToggle nav caret>
-              {`${firstName} ${lastName}`}
+              Options
             </DropdownToggle>
             <DropdownMenu right>
-              <DropdownItem>
-                Profile
-              </DropdownItem>
-              <DropdownItem divider />
-              <DropdownItem>
+              <DropdownItem onClick={this.onLogout}>
                   Logout
               </DropdownItem>
             </DropdownMenu>
@@ -68,7 +84,7 @@ class AppHeader extends Component {
 
     return (
       <div>
-        <Navbar color="light" light expand="md">
+        <Navbar color="dark" dark expand="md">
           <NavbarBrand href="#">Spiralworks</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
@@ -86,8 +102,12 @@ const mapStateToProps = ({ user }) => {
   }
 }
 
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators(userActions, dispatch);
+};
+
 AppHeader.propTypes = {
   user: PropTypes.object
 }
 
-export default connect(mapStateToProps)(AppHeader);
+export default connect(mapStateToProps, mapDispatchToProps)(AppHeader);

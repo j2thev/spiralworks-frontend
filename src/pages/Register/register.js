@@ -131,6 +131,7 @@ class Register extends Component {
 
           if (has(error, 'response.data.error')) {
             const { errors } = error.response.data.error;
+            
             map(errors, (field) => {
               Object.assign(alert, { message: field.message });
             });
@@ -151,10 +152,10 @@ class Register extends Component {
     return (
       <R.RegisterContainer>
         <Row>
-          <Col sm="12" md={{ size: 6, offset: 3 }}>
+          <Col sm="12" md={{ size: 8, offset: 2 }}>
             <Form onSubmit={this.handleSubmit} noValidate>
               <FormGroup>
-                <h4>Create your personal account</h4>
+                <h3>Create your personal account</h3>
               </FormGroup>
               <FormGroup>
                 <Alert color={alert.color} isOpen={alert.visible}>
@@ -204,7 +205,7 @@ class Register extends Component {
                 </FormText>
               </FormGroup>
               <FormGroup>
-                <Label>Phone Number (Format: +639 or 09 xxxxxxxxx)</Label>
+                <Label>Phone Number</Label>
                 <Input
                   invalid={errors.phoneNo.length > 0 ? true : false}
                   type="phoneNo"
@@ -215,6 +216,9 @@ class Register extends Component {
                   onChange={this.handleChange}
                   error={errors.phoneNo}
                 />
+                <FormText>
+                  Format: +639xxxxxxxxx, 09xxxxxxxxx
+                </FormText>
                 <FormText color="danger">
                   {errors.phoneNo}
                 </FormText>
@@ -247,7 +251,7 @@ class Register extends Component {
                   {errors.confirmPassword}
                 </FormText>
               </FormGroup>
-              <Button color="success" block>Create an account</Button>
+              <Button color="success" block>CREATE AN ACCOUNT</Button>
             </Form>
           </Col>
         </Row>

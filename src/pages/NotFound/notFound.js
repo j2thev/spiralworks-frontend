@@ -9,8 +9,8 @@ function NotFound() {
   return (
     <R.NotFoundContainer>
       <Row>
-        <Col sm="12" md={{ size: 6, offset: 3 }}>
-          <h5>Oops!</h5>
+        <Col sm="12" md={{ size: 8, offset: 2 }}>
+          <h3>Oops!</h3>
           Page not found.
         </Col>
       </Row>
