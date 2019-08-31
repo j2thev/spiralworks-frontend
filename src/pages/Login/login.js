@@ -99,9 +99,9 @@ class Login extends Component {
           const { data } = result.data;
 
           if (!isEmpty(data)) {
-            const { _id, email, phoneNo, firstName, lastName } = data;
+            const { _id: id, email, phoneNo, firstName, lastName } = data;
             const user = {
-              id: _id,
+              id,
               email,
               phoneNo,
               firstName,

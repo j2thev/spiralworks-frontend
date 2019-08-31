@@ -1,0 +1,323 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login Page should render correctly 1`] = `
+<TestProvider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Provider
+    store={
+      Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      }
+    }
+  >
+    <Connect(Login)>
+      <Login
+        create={[Function]}
+        login={[Function]}
+        logout={[Function]}
+        save={[Function]}
+        update={[Function]}
+      >
+        <Styled(Container)>
+          <StyledComponent
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-bdVaJa",
+                  "isStatic": true,
+                  "lastClassName": "bxvob",
+                  "rules": Array [
+                    "
+  margin-top: 50px;
+",
+                  ],
+                },
+                "displayName": "Styled(Container)",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-bdVaJa",
+                "target": [Function],
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={null}
+          >
+            <Container
+              className="sc-bdVaJa bxvob"
+              tag="div"
+            >
+              <div
+                className="sc-bdVaJa bxvob container"
+              >
+                <Row
+                  tag="div"
+                >
+                  <div
+                    className="row"
+                  >
+                    <Col
+                      md={
+                        Object {
+                          "offset": 2,
+                          "size": 8,
+                        }
+                      }
+                      sm="12"
+                      tag="div"
+                      widths={
+                        Array [
+                          "xs",
+                          "sm",
+                          "md",
+                          "lg",
+                          "xl",
+                        ]
+                      }
+                    >
+                      <div
+                        className="col-sm-12 col-md-8 offset-md-2"
+                      >
+                        <Form
+                          noValidate={true}
+                          onSubmit={[Function]}
+                          tag="form"
+                        >
+                          <form
+                            className=""
+                            noValidate={true}
+                            onSubmit={[Function]}
+                          >
+                            <FormGroup
+                              tag="div"
+                            >
+                              <div
+                                className="form-group"
+                              >
+                                <h3>
+                                  Sign in
+                                </h3>
+                              </div>
+                            </FormGroup>
+                            <FormGroup
+                              tag="div"
+                            >
+                              <div
+                                className="form-group"
+                              >
+                                <Alert
+                                  closeAriaLabel="Close"
+                                  color=""
+                                  fade={true}
+                                  isOpen={false}
+                                  tag="div"
+                                  transition={
+                                    Object {
+                                      "appear": true,
+                                      "baseClass": "fade",
+                                      "baseClassActive": "show",
+                                      "enter": true,
+                                      "exit": true,
+                                      "in": true,
+                                      "mountOnEnter": false,
+                                      "onEnter": [Function],
+                                      "onEntered": [Function],
+                                      "onEntering": [Function],
+                                      "onExit": [Function],
+                                      "onExited": [Function],
+                                      "onExiting": [Function],
+                                      "tag": "div",
+                                      "timeout": 150,
+                                      "unmountOnExit": true,
+                                    }
+                                  }
+                                >
+                                  <Fade
+                                    appear={true}
+                                    baseClass="fade"
+                                    baseClassActive="show"
+                                    className="alert alert-"
+                                    enter={true}
+                                    exit={true}
+                                    in={false}
+                                    mountOnEnter={false}
+                                    onEnter={[Function]}
+                                    onEntered={[Function]}
+                                    onEntering={[Function]}
+                                    onExit={[Function]}
+                                    onExited={[Function]}
+                                    onExiting={[Function]}
+                                    role="alert"
+                                    tag="div"
+                                    timeout={150}
+                                    unmountOnExit={true}
+                                  >
+                                    <Transition
+                                      appear={true}
+                                      enter={true}
+                                      exit={true}
+                                      in={false}
+                                      mountOnEnter={false}
+                                      onEnter={[Function]}
+                                      onEntered={[Function]}
+                                      onEntering={[Function]}
+                                      onExit={[Function]}
+                                      onExited={[Function]}
+                                      onExiting={[Function]}
+                                      timeout={150}
+                                      unmountOnExit={true}
+                                    />
+                                  </Fade>
+                                </Alert>
+                              </div>
+                            </FormGroup>
+                            <FormGroup
+                              tag="div"
+                            >
+                              <div
+                                className="form-group"
+                              >
+                                <Label
+                                  tag="label"
+                                  widths={
+                                    Array [
+                                      "xs",
+                                      "sm",
+                                      "md",
+                                      "lg",
+                                      "xl",
+                                    ]
+                                  }
+                                >
+                                  <label
+                                    className=""
+                                  >
+                                    Email or Phone Number
+                                  </label>
+                                </Label>
+                                <Input
+                                  autoFocus={true}
+                                  invalid={false}
+                                  name="username"
+                                  onChange={[Function]}
+                                  required={true}
+                                  type="text"
+                                  value=""
+                                >
+                                  <input
+                                    autoFocus={true}
+                                    className="form-control"
+                                    name="username"
+                                    onChange={[Function]}
+                                    required={true}
+                                    type="text"
+                                    value=""
+                                  />
+                                </Input>
+                                <FormText
+                                  color="danger"
+                                  tag="small"
+                                >
+                                  <small
+                                    className="form-text text-danger"
+                                  />
+                                </FormText>
+                              </div>
+                            </FormGroup>
+                            <FormGroup
+                              tag="div"
+                            >
+                              <div
+                                className="form-group"
+                              >
+                                <Label
+                                  tag="label"
+                                  widths={
+                                    Array [
+                                      "xs",
+                                      "sm",
+                                      "md",
+                                      "lg",
+                                      "xl",
+                                    ]
+                                  }
+                                >
+                                  <label
+                                    className=""
+                                  >
+                                    Password
+                                  </label>
+                                </Label>
+                                <Input
+                                  invalid={false}
+                                  name="password"
+                                  onChange={[Function]}
+                                  required={true}
+                                  type="password"
+                                  value=""
+                                >
+                                  <input
+                                    className="form-control"
+                                    name="password"
+                                    onChange={[Function]}
+                                    required={true}
+                                    type="password"
+                                    value=""
+                                  />
+                                </Input>
+                                <FormText
+                                  color="danger"
+                                  tag="small"
+                                >
+                                  <small
+                                    className="form-text text-danger"
+                                  />
+                                </FormText>
+                              </div>
+                            </FormGroup>
+                            <Button
+                              block={true}
+                              color="primary"
+                              tag="button"
+                            >
+                              <button
+                                aria-label={null}
+                                className="btn btn-primary btn-block"
+                                onClick={[Function]}
+                              >
+                                SIGN IN
+                              </button>
+                            </Button>
+                          </form>
+                        </Form>
+                      </div>
+                    </Col>
+                  </div>
+                </Row>
+              </div>
+            </Container>
+          </StyledComponent>
+        </Styled(Container)>
+      </Login>
+    </Connect(Login)>
+  </Provider>
+</TestProvider>
+`;

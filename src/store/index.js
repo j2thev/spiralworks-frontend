@@ -4,7 +4,7 @@ import storage from 'redux-persist/lib/storage';
 import thunk from 'redux-thunk';
 import appReducer from '../reducers';
 import initialState from '../reducers/initialState';
-import logger from 'redux-logger';
+// import logger from 'redux-logger';
 import { LOGOUT } from '../constants/actionTypes';
 
 const persistConfig = {
@@ -24,7 +24,7 @@ const rootReducer = (state, action) => {
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 const middlewares = [
-  logger,
+  // logger,
   thunk
 ];
 

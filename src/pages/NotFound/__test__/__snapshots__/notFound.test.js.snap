@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotFound Page should render correctly 1`] = `
+<TestProvider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Provider
+    store={
+      Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      }
+    }
+  >
+    <NotFound>
+      <Styled(Container)>
+        <StyledComponent
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-bdVaJa",
+                "isStatic": true,
+                "lastClassName": "gOVJvL",
+                "rules": Array [
+                  "
+  margin-top: 50px
+",
+                ],
+              },
+              "displayName": "Styled(Container)",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-bdVaJa",
+              "target": [Function],
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            }
+          }
+          forwardedRef={null}
+        >
+          <Container
+            className="sc-bdVaJa gOVJvL"
+            tag="div"
+          >
+            <div
+              className="sc-bdVaJa gOVJvL container"
+            >
+              <Row
+                tag="div"
+              >
+                <div
+                  className="row"
+                >
+                  <Col
+                    md={
+                      Object {
+                        "offset": 2,
+                        "size": 8,
+                      }
+                    }
+                    sm="12"
+                    tag="div"
+                    widths={
+                      Array [
+                        "xs",
+                        "sm",
+                        "md",
+                        "lg",
+                        "xl",
+                      ]
+                    }
+                  >
+                    <div
+                      className="col-sm-12 col-md-8 offset-md-2"
+                    >
+                      <h3>
+                        Oops!
+                      </h3>
+                      Page not found.
+                    </div>
+                  </Col>
+                </div>
+              </Row>
+            </div>
+          </Container>
+        </StyledComponent>
+      </Styled(Container)>
+    </NotFound>
+  </Provider>
+</TestProvider>
+`;
